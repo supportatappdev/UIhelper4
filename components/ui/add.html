@@ -1,0 +1,78 @@
+<div ng-controller='AddCompCtrl'>
+    <div class="row wrapper border-bottom white-bg page-heading ng-scope">
+        <div class="col-lg-12">
+        <h2><i class="fa fa-html5"></i> Add Component
+            <button 
+            type="button" class="btn btn-w-m m-l-sm btn-primary pull-right" 
+            ng-click="save()"><i class="fa fa-save"></i> Save</button>
+            <button 
+            type="button" class="btn btn-w-m   pull-right" 
+            ng-click="back()"><i class="fa fa-backward"></i> Back</button>
+        </h2>
+    </div>
+    </div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="tabs-container">
+                <tabset>
+                    <tab>
+                        <tab-heading>
+                            Component Details
+                        </tab-heading>
+                        <div class="panel-body">
+
+                            <fieldset class="form-horizontal">
+                                <div class="form-group"><label class="col-sm-2 control-label">Name:</label>
+                                    <div class="col-sm-10"><input type="text" class="form-control" ng-model="tab1.name" placeholder="Component name"></div>
+                                </div>
+                                <div class="form-group"><label class="col-sm-2 control-label">Type:</label>
+                                    <div class="col-sm-10">
+                                        <select name="type" id="type" class="form-control" ng-model="tab1.type">
+                                            <option ng-repeat = "r in types" value="{{r.ID}}">{{r.NAME}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="col-sm-2 control-label">Icon:</label>
+                                    <div class="col-sm-10"><input type="text" class="form-control" ng-model = "tab1.icon" placeholder="fa fa-table"></div>
+                                </div>
+                                <div class="form-group">
+                                <label class="col-sm-2 control-label">Description:</label>
+                                    <div class="col-sm-10"><input type="text" ng-model="tab1.desc" class="form-control" ></div>
+                                </div>
+                                 <div class="form-group">
+                                <label class="col-sm-2 control-label">Html Text:</label>
+                                      <div class="col-sm-10">
+                                           <ui-codemirror ui-codemirror-opts="editorOptions2" ng-model="tab2.htmlcode"></ui-codemirror>   
+                                    </div>
+                                    </div>
+                                <div class="form-group">
+                                <label class="col-sm-2 control-label">Controller:</label>
+                                      <div class="col-sm-10">
+                                           <ui-codemirror ui-codemirror-opts="editorOptions2" ng-model="tab3.jscode"></ui-codemirror>   
+                                    </div>
+                                    </div>
+                            </fieldset>
+
+                        </div>
+                    </tab>
+                    <tab>
+                        <tab-heading>
+                           Preview 
+                        </tab-heading>
+                        <div class="panel-body">
+                            <fieldset class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+    </div>
+
+</div>
