@@ -1,0 +1,28 @@
+<div class="inmodal">
+	<div class="modal-header">
+		<h4 class="modal-title">
+		<i class="fa fa-eye"></i> Prview {{selectComp.NAME}} Component
+		  <button 
+            type="button" class="btn  btn-white pull-right" 
+            ng-click="cancel()"><i class="fa 
+fa-times"></i> Close</button>
+<button 
+            type="button" class="btn   m-r-sm btn-white pull-right" 
+             ngclipboard data-clipboard-text="{{selectComp.HTML_TEXT}}" 
+             ngclipboard-success="onSuccess(e);" 
+             ngclipboard-error="onError(e);"><i class="fa 
+fa-tags"></i> Copy Html Text</button>
+		</h4>
+	</div>
+	<div class="modal-body" style="min-height:300px">
+	    <div>
+        	<span bind-html-compile="selectComp.HTML_TEXT" class="m-r-lg"></span>
+        </div>	
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-white" ng-click="cancel()">
+		<i class="fa 
+fa-times"></i> Close</button>
+	</div>
+
+</div>
